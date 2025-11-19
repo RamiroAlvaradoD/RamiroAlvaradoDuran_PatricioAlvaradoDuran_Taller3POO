@@ -4,7 +4,7 @@ import strategy.PrioridadStrategy;
 
 public class Administrador extends Usuario {
 
-	public Administrador(String username, String password, String rol) {
+	public Administrador(String username, String password) {
 		super(username, password, "Administrador");
 	}
 
