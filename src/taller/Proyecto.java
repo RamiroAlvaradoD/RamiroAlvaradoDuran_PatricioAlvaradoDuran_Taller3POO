@@ -1,6 +1,8 @@
 package taller;
 import java.util.ArrayList;
 
+import strategy.PrioridadStrategy;
+
 public class Proyecto {
 	private String proyectoID;
 	private String nombre;
@@ -28,6 +30,25 @@ public class Proyecto {
 
 	public ArrayList<Tarea> getTareas() {
 		return tareas;
+	}
+	
+	public void addTarea(Tarea t) {
+		tareas.add(t);
+	}
+	
+	public void removeTarea(String tareaId) {
+		tareas.removeIf(t -> t.getTareaId().equals(tareaId));
+	}
+	
+	//Strategy
+	public void ordenarTareas(PrioridadStrategy strategy) {
+		strategy.ordenar(tareas);
+		
+	}
+
+	@Override
+	public String toString() {
+		return "Proyecto [proyectoID=" + proyectoID + ", nombre=" + nombre + ", responsable=" + responsable + "]";
 	}
 
 }
