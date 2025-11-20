@@ -2,6 +2,9 @@ package sistema;
 
 import java.util.ArrayList;
 
+import archivos.ArchivoProyectos;
+import archivos.ArchivoTareas;
+import archivos.ArchivoUsuarios;
 import taller.Usuario;
 import taller.Proyecto;
 import taller.Tarea;
@@ -27,16 +30,50 @@ public class Sistema {
 	}
 	
 	public void cargarDatos() {
-		//Pendiente implementacion
 
+	    ArchivoUsuarios au = new ArchivoUsuarios();
+	    ArchivoProyectos ap = new ArchivoProyectos();
+	    ArchivoTareas at = new ArchivoTareas();
+
+	  
+	    this.usuarios = au.leer();
+
+	    this.proyectos = ap.leer();
+
+	    this.tareas = at.leer();
+
+	    for (Proyecto p : proyectos) {
+	        for (Tarea t : tareas) {
+	            if (t.getProyectoID().equals(p.getProyectoID())) {
+	                p.addTarea(t); 
+	            }
+	        }
+	    }
+
+	    System.out.println("Datos cargados correctamente.");
 	}
+
 	
 	public void guardarDatos() {
-		
+
+	    ArchivoUsuarios au = new ArchivoUsuarios();
+	    ArchivoProyectos ap = new ArchivoProyectos();
+	    ArchivoTareas at = new ArchivoTareas();
+
+	    au.escribir(usuarios);
+	    ap.escribir(proyectos);
+	    at.escribir(tareas);
+
+	    System.out.println("Datos guardados correctamente.");
 	}
+
 	
 	public Usuario login(String username, String password) {
-		//Pendiente implementacion
+		for (Usuario u: usuarios) {
+			if (u.getUsername().equals(username) && u.getPassword().equals(password)) {
+				return u;
+			}
+		}
 		return null;
 	}
 	
@@ -71,12 +108,12 @@ public class Sistema {
 	}
 	
 	public void eliminarTarea(String TareaID) {
-		tareas.removeIf(t -> t.getTareaId().equals(TareaID));
+		tareas.removeIf(t -> t.getTareaID().equals(TareaID));
 	}
 	
 	public Tarea buscarTarea(String tareaID) {
 		for (Tarea t: tareas) {
-			if (t.getTareaId().equals(tareaID)) {
+			if (t.getTareaID().equals(tareaID)) {
 				return t;
 			}
 		}
@@ -86,7 +123,7 @@ public class Sistema {
 	public ArrayList<Tarea> getTareasPorProyecto(String proyectoID) {
 		ArrayList<Tarea> lista = new ArrayList<>();
 		for (Tarea t: tareas) {
-			if (t.getProyectoId().equals(proyectoID)) {
+			if (t.getProyectoID().equals(proyectoID)) {
 				lista.add(t);
 			}
 		}

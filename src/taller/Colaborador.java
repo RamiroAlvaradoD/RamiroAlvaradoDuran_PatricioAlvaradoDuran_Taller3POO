@@ -4,7 +4,7 @@ import visitor.TareaVisitor;
 
 public class Colaborador extends Usuario {
 
-	public Colaborador(String username, String password, String rol) {
+	public Colaborador(String username, String password) {
 		super(username, password, "Colaborador");
 	}
 

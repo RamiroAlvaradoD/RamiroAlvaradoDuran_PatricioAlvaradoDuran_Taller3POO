@@ -19,6 +19,9 @@ public abstract class Usuario {
 		return rol;
 	}
 	
+	public String getPassword() {
+		return password;
+	}
 	public abstract void mostrarMenu();
 	
 
