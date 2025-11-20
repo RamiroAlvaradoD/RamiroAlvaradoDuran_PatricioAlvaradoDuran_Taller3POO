@@ -8,7 +8,7 @@ public class PrioridadComplejidad implements PrioridadStrategy {
 
 	@Override
 	public void ordenar(ArrayList<Tarea> lista) {
-		//Se dejo escrito el metodo que establecimos en la interface, completar mas rato.
+		lista.sort((t1, t2) -> t1.getComplejidad().compareTo(t2.getComplejidad()));
 		
 	}
 
