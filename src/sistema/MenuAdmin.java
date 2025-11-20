@@ -17,7 +17,7 @@ public class MenuAdmin {
 
 	private Administrador admin;
 
-	public MenuAdmin(Administrador Admin) {
+	public MenuAdmin(Administrador admin) {
 		this.admin = admin;
 	}
 

@@ -25,7 +25,7 @@ public class ArchivoTareas {
 
             while (sc.hasNextLine()) {
                 String linea = sc.nextLine();
-                String[] datos = linea.split(";");
+                String[] datos = linea.split("\\|");
 
                 String proyectoID = datos[0];
                 String tareaID = datos[1];
@@ -64,13 +64,13 @@ public class ArchivoTareas {
 
             for (Tarea t : lista) {
                 fw.write(
-                    t.getProyectoID() + ";" +
-                    t.getTareaID() + ";" +
-                    t.getClass().getSimpleName() + ";" +  // Tipo a partir de la clase
-                    t.getDescripcion() + ";" +
-                    t.getEstado() + ";" +
-                    t.getResponsable() + ";" +
-                    t.getComplejidad() + ";" +
+                    t.getProyectoID() + "\\|" +
+                    t.getTareaID() + "\\|" +
+                    t.getClass().getSimpleName() + "\\|" +  // Tipo a partir de la clase
+                    t.getDescripcion() + "\\|" +
+                    t.getEstado() + "\\|" +
+                    t.getResponsable() + "\\|" +
+                    t.getComplejidad() + "\\|" +
                     t.getFecha() + "\n"
                 );
             }

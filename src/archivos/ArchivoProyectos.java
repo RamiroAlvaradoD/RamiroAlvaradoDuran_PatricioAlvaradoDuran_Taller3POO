@@ -23,7 +23,7 @@ public class ArchivoProyectos {
 
             while (sc.hasNextLine()) {
                 String linea = sc.nextLine();
-                String[] datos = linea.split(";");
+                String[] datos = linea.split("\\|");
 
                 String proyectoID = datos[0];
                 String nombre = datos[1];
@@ -47,8 +47,8 @@ public class ArchivoProyectos {
 
             for (Proyecto p : lista) {
                 fw.write(
-                    p.getProyectoID() + ";" +
-                    p.getNombre() + ";" +
+                    p.getProyectoID() + "\\|" +
+                    p.getNombre() + "\\|" +
                     p.getResponsable() + "\n"
                 );
             }
