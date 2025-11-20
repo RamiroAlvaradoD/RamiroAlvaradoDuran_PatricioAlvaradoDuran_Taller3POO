@@ -1,5 +1,6 @@
 package taller;
 import sistema.MenuAdmin;
+import sistema.Sistema;
 import strategy.PrioridadStrategy;
 
 public class Administrador extends Usuario {
@@ -15,20 +16,20 @@ public class Administrador extends Usuario {
 		
 	}
 	
-	public void agregarProyecto() {
-		
+	public void agregarProyecto(Proyecto proyecto) {
+		Sistema.getInstancia().agregarProyecto(proyecto);
 	}
 	
-	public void eliminarProyecto() {
-		
+	public void eliminarProyecto(String proyectoID) {
+		Sistema.getInstancia().eliminarProyecto(proyectoID);
 	}
 	
-	public void agregarTarea() {
-		
+	public void agregarTarea(Tarea tarea) {
+		Sistema.getInstancia().agregarTarea(tarea);
 	}
 	
-	public void eliminarTarea() {
-		
+	public void eliminarTarea(String tareaID) {
+		Sistema.getInstancia().eliminarTarea(tareaID);
 	}
 	
 	public void asignarPrioridad(Proyecto proyecto, PrioridadStrategy strategy) {
@@ -37,7 +38,12 @@ public class Administrador extends Usuario {
 
 	
 	public void generarReporte() {
-		
+		for (Proyecto p : Sistema.getInstancia().getProyectos()) {
+			System.out.println(p);
+			for (Tarea t: p.getTareas()) {
+				System.out.println("- " +t.getDescripcion());
+			}
+		}
 	}
 
 }
