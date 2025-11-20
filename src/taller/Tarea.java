@@ -51,5 +51,5 @@ public abstract class Tarea {
 	}
 	
 	public abstract void aceptar(TareaVisitor visitor);
-
+		
 }

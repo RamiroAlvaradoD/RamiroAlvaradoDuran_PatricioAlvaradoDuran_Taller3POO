@@ -11,7 +11,7 @@ public class Documentacion extends Tarea{
 
 	@Override
 	public void aceptar(TareaVisitor visitor) {
-		//completar mas tarde con el metodo en la clase visitor
+		visitor.visitar(this);
 		
 	}
 
