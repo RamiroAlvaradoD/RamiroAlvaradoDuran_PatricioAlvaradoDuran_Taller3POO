@@ -71,12 +71,12 @@ public class Sistema {
 	}
 	
 	public void eliminarTarea(String TareaID) {
-		tareas.removeIf(t -> t.getTareaId().equals(TareaID));
+		tareas.removeIf(t -> t.getTareaID().equals(TareaID));
 	}
 	
 	public Tarea buscarTarea(String tareaID) {
 		for (Tarea t: tareas) {
-			if (t.getTareaId().equals(tareaID)) {
+			if (t.getTareaID().equals(tareaID)) {
 				return t;
 			}
 		}
@@ -86,7 +86,7 @@ public class Sistema {
 	public ArrayList<Tarea> getTareasPorProyecto(String proyectoID) {
 		ArrayList<Tarea> lista = new ArrayList<>();
 		for (Tarea t: tareas) {
-			if (t.getProyectoId().equals(proyectoID)) {
+			if (t.getProyectoID().equals(proyectoID)) {
 				lista.add(t);
 			}
 		}

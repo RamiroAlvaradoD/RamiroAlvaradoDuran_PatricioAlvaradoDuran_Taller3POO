@@ -37,7 +37,7 @@ public class Proyecto {
 	}
 	
 	public void removeTarea(String tareaId) {
-		tareas.removeIf(t -> t.getTareaId().equals(tareaId));
+		tareas.removeIf(t -> t.getTareaID().equals(tareaId));
 	}
 	
 	//Strategy

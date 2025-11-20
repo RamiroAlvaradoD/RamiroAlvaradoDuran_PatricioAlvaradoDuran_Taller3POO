@@ -22,11 +22,11 @@ public abstract class Tarea {
 		this.fecha = fecha;
 	}
 
-	public String getProyectoId() {
+	public String getProyectoID() {
 		return proyectoId;
 	}
 
-	public String getTareaId() {
+	public String getTareaID() {
 		return tareaId;
 	}
 
