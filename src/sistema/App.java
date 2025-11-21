@@ -1,4 +1,7 @@
 package sistema;
+//Ramiro Alvarado Durán - RUT 19.428.146-3 - ITI - GitHub: RamiroAlvaradoD
+//Patricio Alvarado Durán - RUT 20.955.249-3 - ITI - GitHub: Garaxlight
+//Taller N°3 - Programación Orientada a Objetos
 
 /**
  * Clase principal de la aplicación.
