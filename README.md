@@ -72,6 +72,6 @@ Todo el código está completamente documentado con JavaDoc.
 
 ## UML
 <img width="1148" height="1054" alt="Diagrama sin título-Página-2 drawio" src="https://github.com/user-attachments/assets/ce77b323-426f-48fe-97cc-8c75bd352c53" />
-[Diagrama sin título-Página-2.drawio.pdf](https://github.com/user-attachments/files/23667170/Diagrama.sin.titulo-Pagina-2.drawio.pdf)
+PDF del UML (https://github.com/user-attachments/files/23667170/Diagrama.sin.titulo-Pagina-2.drawio.pdf)
 
 
