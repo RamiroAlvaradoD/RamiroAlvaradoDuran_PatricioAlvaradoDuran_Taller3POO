@@ -55,7 +55,7 @@ public class ArchivoUsuarios {
 			FileWriter fw = new FileWriter(ruta);
 			
 			for(Usuario u: lista) {
-			fw.write(u.getUsername() + "\\|" + u.getPassword() + "\\|" + u.getRol() + "\n");
+			fw.write(u.getUsername() + "|" + u.getPassword() + "|" + u.getRol() + "\n");
 			}
 			
 			fw.close();

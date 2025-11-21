@@ -64,13 +64,13 @@ public class ArchivoTareas {
 
             for (Tarea t : lista) {
                 fw.write(
-                    t.getProyectoID() + "\\|" +
-                    t.getTareaID() + "\\|" +
-                    t.getClass().getSimpleName() + "\\|" +  // Tipo a partir de la clase
-                    t.getDescripcion() + "\\|" +
-                    t.getEstado() + "\\|" +
-                    t.getResponsable() + "\\|" +
-                    t.getComplejidad() + "\\|" +
+                    t.getProyectoID() + "|" +
+                    t.getTareaID() + "|" +
+                    t.getClass().getSimpleName() + "|" + 
+                    t.getDescripcion() + "|" +
+                    t.getEstado() + "|" +
+                    t.getResponsable() + "|" +
+                    t.getComplejidad() + "|" +
                     t.getFecha() + "\n"
                 );
             }

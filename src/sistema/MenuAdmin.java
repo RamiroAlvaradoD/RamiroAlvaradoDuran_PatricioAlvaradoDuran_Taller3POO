@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import javax.swing.RepaintManager;
 
+import factory.TareaFactory;
 import factory.TareaFactoryImpl;
 import strategy.PrioridadComplejidad;
 import strategy.PrioridadFecha;
@@ -100,7 +101,7 @@ public class MenuAdmin {
 				System.out.print("Fecha (YYYY/MM/DD): ");
 				String fecha = sc.nextLine();
 				
-				TareaFactoryImpl factory = new TareaFactoryImpl();
+				TareaFactory factory = new TareaFactoryImpl();
 				
 				try {
 					Tarea nuevaTarea = factory.crearTarea(tipo, proyectoID, tareaID, descripcion,

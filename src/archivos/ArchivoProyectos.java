@@ -47,8 +47,8 @@ public class ArchivoProyectos {
 
             for (Proyecto p : lista) {
                 fw.write(
-                    p.getProyectoID() + "\\|" +
-                    p.getNombre() + "\\|" +
+                    p.getProyectoID() + "|" +
+                    p.getNombre() + "|" +
                     p.getResponsable() + "\n"
                 );
             }
