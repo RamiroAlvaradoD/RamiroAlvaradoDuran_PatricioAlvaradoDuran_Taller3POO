@@ -14,14 +14,47 @@ import taller.Administrador;
 import taller.Proyecto;
 import taller.Tarea;
 
+/**
+ * Menú exclusivo para usuarios con rol Administrador.
+ * 
+ * Permite realizar todas las operaciones administrativas del sistema:
+ * 
+ *   Ver proyectos
+ *   Agregar y eliminar proyectos
+ *   Ver tareas asociadas a un proyecto
+ *   Agregar y eliminar tareas
+ *   Ordenar tareas mediante estrategia Strategy
+ *   Generar reporte del sistema
+ * 
+ * 
+ * Este menú utiliza la instancia única (Singleton) del sistema para
+ * realizar las operaciones centrales.
+ * 
+ * @author Ramiro Alvarado - Patricio Alvarado
+ */
 public class MenuAdmin {
 
+	/** Referencia al administrador autenticado */
 	private Administrador admin;
 
+	/**
+     * Constructor que recibe al administrador que utilizará el menú.
+     *
+     * @param admin administrador autenticado
+     */
 	public MenuAdmin(Administrador admin) {
 		this.admin = admin;
 	}
 
+	
+	 /**
+     * Muestra el menú de opciones para el administrador y gestiona
+     * las operaciones correspondientes según la opción ingresada.
+     * 
+     * Las operaciones incluyen: gestión de proyectos, gestión de tareas,
+     * aplicación del patrón Strategy para ordenar tareas y generación 
+     * de reportes.
+     */
 	public void mostrarOpciones() {
 		Scanner sc = new Scanner(System.in);
 		int opcion;

@@ -11,10 +11,29 @@ import taller.Usuario;
 import taller.Administrador;
 import taller.Colaborador;
 
+/**
+* Maneja la lectura y escritura del archivo usuarios.txt.
+* Permite cargar la lista de usuarios del sistema y guardar los cambios
+* realizados durante la ejecución.
+*
+* Cada línea del archivo tiene el formato:
+* username|password|rol
+*
+* Según el rol detectado, se instancia un Administrador o un Colaborador.
+* Esta clase es usada por Sistema para asegurar la persistencia de usuarios.
+*
+* @author Ramiro Alvarado - Patricio Alvarado
+*/
 public class ArchivoUsuarios {
 	
 	private String ruta = "usuarios.txt";
 	
+	/**
+	* Lee el archivo usuarios.txt y devuelve una lista con los usuarios
+	* instanciados según su rol.
+	*
+	* @return lista de usuarios cargados
+	*/
 	public ArrayList<Usuario> leer(){
 		
 		ArrayList<Usuario> lista = new ArrayList<>();
@@ -50,6 +69,12 @@ public class ArchivoUsuarios {
 		
 	}
 	
+	/**
+	* Escribe la lista de usuarios en usuarios.txt, sobrescribiendo todo
+	* el contenido previo.
+	*
+	* @param lista lista de usuarios a escribir
+	*/
 	public void escribir(ArrayList<Usuario>lista) {
 		try {
 			FileWriter fw = new FileWriter(ruta);

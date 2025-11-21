@@ -11,12 +11,33 @@ import taller.Bug;
 import taller.Feature;
 import taller.Documentacion;
 
+/**
+ * Maneja la lectura y escritura del archivo tareas.txt.
+ * Permite cargar todas las tareas guardadas y escribir los cambios realizados
+ * durante la ejecución del sistema.
+ *
+ * Cada línea del archivo tiene el formato:
+ * ProyectoID|TareaID|Tipo|Descripcion|Estado|Responsable|Complejidad|Fecha
+ *
+ * Dependiendo del tipo de tarea (Bug, Feature o Documentacion), se crea
+ * la instancia correspondiente utilizando sus constructores.
+ *
+ * Este archivo es utilizado por la clase Sistema para asegurar la persistencia
+ * de todas las tareas.
+ *
+ * @author Ramiro Alvarado - Patricio Alvarado
+ */
 public class ArchivoTareas {
 
     private String ruta = "tareas.txt";
 
     public ArrayList<Tarea> leer() {
 
+    	/**
+         * Lee el archivo tareas.txt y devuelve todas las tareas encontradas.
+         *
+         * @return lista de tareas cargadas desde el archivo
+         */
         ArrayList<Tarea> lista = new ArrayList<>();
 
         try {
@@ -57,6 +78,11 @@ public class ArchivoTareas {
         return lista;
     }
 
+    /**
+     * Escribe la lista de tareas en el archivo tareas.txt, sobrescribiendo su contenido.
+     *
+     * @param lista lista de tareas a escribir
+     */
     public void escribir(ArrayList<Tarea> lista) {
 
         try {

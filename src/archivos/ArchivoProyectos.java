@@ -9,10 +9,28 @@ import java.util.Scanner;
 
 import taller.Proyecto;
 
+/**
+ * Clase encargada de manejar la lectura y escritura del archivo proyectos.txt.
+ * Permite cargar proyectos desde el archivo y guardar los cambios realizados
+ * durante la ejecución del sistema.
+ *
+ * Cada línea del archivo tiene el formato:
+ * ID|Nombre|Responsable
+ *
+ * Esta clase es utilizada por Sistema para mantener la persistencia de proyectos.
+ *
+ * @author Ramiro Alvarado - Patricio Alvarado
+ */
 public class ArchivoProyectos {
 
     private String ruta = "proyectos.txt";
 
+    
+    /**
+     * Lee el archivo de proyectos y devuelve una lista con los objetos cargados.
+     *
+     * @return lista de proyectos leídos desde proyectos.txt
+     */
     public ArrayList<Proyecto> leer() {
 
         ArrayList<Proyecto> lista = new ArrayList<>();
@@ -41,6 +59,12 @@ public class ArchivoProyectos {
         return lista;
     }
 
+    /**
+     * Escribe la lista de proyectos en el archivo proyectos.txt,
+     * sobrescribiendo todo el contenido anterior.
+     *
+     * @param lista lista de proyectos a escribir
+     */
     public void escribir(ArrayList<Proyecto> lista) {
         try {
             FileWriter fw = new FileWriter(ruta);
