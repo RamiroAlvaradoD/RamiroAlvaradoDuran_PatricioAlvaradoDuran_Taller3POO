@@ -95,4 +95,10 @@ public abstract class Tarea {
 	 */
 	public abstract void aceptar(TareaVisitor visitor);
 
+	@Override
+	public String toString() {
+		return "Tarea [proyectoId=" + proyectoId + ", tareaId=" + tareaId + ", descripcion=" + descripcion + ", estado="
+				+ estado + ", responsable=" + responsable + ", complejidad=" + complejidad + ", fecha=" + fecha + "]";
+	}
+
 }

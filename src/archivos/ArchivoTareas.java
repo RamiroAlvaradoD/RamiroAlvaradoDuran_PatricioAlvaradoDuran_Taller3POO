@@ -59,13 +59,13 @@ public class ArchivoTareas {
 
 
                 if (tipo.equalsIgnoreCase("Bug")) {
-                    lista.add(new Bug(tareaID, proyectoID, descripcion, estado, responsable, complejidad, fecha));
+                    lista.add(new Bug(proyectoID, tareaID, descripcion, estado, responsable, complejidad, fecha));
                 } 
                 else if (tipo.equalsIgnoreCase("Feature")) {
-                    lista.add(new Feature(tareaID, proyectoID, descripcion, estado, responsable, complejidad, fecha));
+                    lista.add(new Feature(proyectoID, tareaID, descripcion, estado, responsable, complejidad, fecha));
                 } 
                 else if (tipo.equalsIgnoreCase("Documentacion")) {
-                    lista.add(new Documentacion(tareaID, proyectoID, descripcion, estado, responsable, complejidad, fecha));
+                    lista.add(new Documentacion(proyectoID, tareaID, descripcion, estado, responsable, complejidad, fecha));
                 }
             }
 
